@@ -1,0 +1,22 @@
+div.page-header {
+  color: #00cc00;
+}
+nav {
+  background-color: #001a00 !important;
+}
+nav a {
+  color: white !important;
+}
+nav li {
+  transition: background-color 0.2s, color 0.2s;
+}
+nav li.current {
+  background-color: #00b300 !important;
+  transition: background-color 0.2s, color 0.2s;
+}
+nav li:hover {
+  background-color: #00cc00 !important;
+}
+.navbar-brand > a{
+  color: white !important;
+}
