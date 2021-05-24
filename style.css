@@ -20,3 +20,11 @@ nav li:hover {
 .navbar-brand > a{
   color: white !important;
 }
+img {
+  border-width: 5px;
+  width: 100%;
+  border-color: black;
+}
+P {
+  width: 100%;
+}
