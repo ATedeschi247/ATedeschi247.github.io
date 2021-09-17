@@ -94,3 +94,9 @@ table a {
 th {
   color: #0073e6;
 }
+#CBunionCap {
+  margin-bottom: 20px;
+}
+.limited_height {
+  max-width: 300px;
+}
