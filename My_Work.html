@@ -1,3 +1,4 @@
+<!DOCTYPE hmtl>
 <html>
     <head>
         <meta charset="utf-8">
@@ -18,6 +19,10 @@
 
         <!-- Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Blinker' rel='stylesheet'>
+
+        <!-- CodeHS JS implementation -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://static.codehs.com/gulp/80550f5fc4071985bfef352d04f005ca3de931d3/chs-js-lib/chs.js"></script>
     </head>
     <body>
       <nav class="navbar navbar-default navbar-fixed-top">
@@ -37,6 +42,7 @@
             <li><a href="About_Me.html">About Me</a></li>
             <li class="current"><a href="My_Work.html">My Work</a></li>
             <li><a href="My_Summer.html">My Summer</a></li>
+            <li><a href="2022Intro.html">New Year's Goals</a></li>
           </ul>
         </div>
       </div>
@@ -216,6 +222,55 @@
           </div>
         </div>
         <br><br>
+        <div class="page-header">
+          <h1>Halloween JavaScript Project</h1>
+        </div>
+        <p>This is a project that I am doing in JavaScript to make a pumpkin for Halloween!
+        I hope you like the design of it, for it was all created using JavaScript (and CodeHS)
+        graphics!</p>
+        <br>
+        <Canvas Width="700" Height="500" Class="Codehs-Editor-Canvas"></Canvas>
+        <script>
+        window.onload = function() {
+
+          function start() {
+            var pumpkin = new Oval(500, 350);
+            pumpkin.setColor(Color.orange);
+            pumpkin.setPosition(getWidth()/2, getHeight()/2);
+            add(pumpkin);
+
+            var stem = new Rectangle(50, 100)
+            stem.setColor(Color.green);
+            stem.setPosition(getWidth()/2 - 25, getHeight()/2 - 200);
+            add(stem);
+
+            var eyeLeft = new Circle(35);
+            eyeLeft.setColor(Color.black);
+            eyeLeft.setPosition(getWidth()/2 - 110, getHeight()/2 - 40);
+            add(eyeLeft);
+
+            var eyeRight = new Circle(35);
+            eyeRight.setColor(Color.black);
+            eyeRight.setPosition(getWidth()/2 + 110, getHeight()/2 - 40);
+            add(eyeRight);
+
+            var mouth = new Oval(400, 100);
+            mouth.setColor(Color.black);
+            mouth.setPosition(getWidth()/2, getHeight()/2 + 55);
+            add(mouth);
+
+            var mouthCover = new Rectangle(420, 50);
+            mouthCover.setColor(Color.orange);
+            mouthCover.setPosition(getWidth()/2 - 210, getHeight()/2 + 55);
+            add(mouthCover);
+          }
+
+          if (typeof start === 'function') {
+            start();
+          }
+        };
+        </script>
       </div>
+      <br><br>
     </body>
 </html>

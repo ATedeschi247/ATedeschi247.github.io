@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>New Year's Resolutions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Blinker' rel='stylesheet'>
+
+    <!-- CodeHS Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://static.codehs.com/gulp/80550f5fc4071985bfef352d04f005ca3de931d3/chs-js-lib/chs.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#links" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span> <!-- only appears for screen readers -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">Portfolio</a>
+      </div>
+      <div class="collapse navbar-collapse" id="links">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About_Me.html">About Me</a></li>
+          <li><a href="My_Work.html">My Work</a></li>
+          <li><a href="My_Summer.html">My Summer</a></li>
+          <li class="current"><a href="2022Intro.html">New Year's Goals</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+    <div class="container">
+      <br><br>
+      <div class="page-header text-center">
+        <h1>2022 New Year's Resolutions</h1>
+      </div>
+      <p>As we all know, the coming of the new year is a time for us to reflect on
+      what we've done in the past year and how we will improve ourselves this year.</p>
+      <p>That is why I am going to share with you my new year's resolutions for 2022!</p>
+      <ul>
+        My resolutions for this year are to:
+        <li>Continue to exercise and keep physically fit.</li>
+        <li>Slow down on the sugars and sweets (in other words, not to have too much of them).</li>
+        <li></li>
+      </ul>
+      <canvas class="codehs-editor-canvas" height="400px" width="500px"></canvas>
+      <script>
+      window.onload = function() {
+        var newYear = new Text("Happy New Year!", "30pt Blinker");
+        var balloon;
+        var string;
+        function start() {
+          balloonDraw();
+          setTimer(balloonDraw, 1000);
+        }
+        function balloonDraw() {
+          removeAll();
+          randBalloonTop();
+          randBalloonTop();
+          randBalloonTop();
+          randBalloonBottom();
+          randBalloonBottom();
+          randBalloonBottom();
+          textDraw();
+        }
+        function textDraw() {
+          newYear.setPosition(getWidth()/2 - 140, getHeight()/2 + 15);
+          newYear.setColor(Color.red);
+          add(newYear);
+        }
+        function randBalloonTop() {
+          var balloonX = Randomizer.nextInt(50+25, getWidth()-50-25);
+          var balloonY = Randomizer.nextInt(50, getHeight()/2- 15 - 50);
+          balloon = new Oval(75, 100);
+          balloon.setPosition(balloonX, balloonY);
+          balloon.setColor(Color.red);
+          add(balloon);
+          string = new Line(balloonX, balloonY + 50, balloonX, balloonY + 50 + 50);
+          add(string);
+
+        }
+        function randBalloonBottom() {
+          var balloonX = Randomizer.nextInt(50+25, getWidth()-50-25);
+          var balloonY = Randomizer.nextInt(getHeight()/2 + 30 + 50, getHeight() - 50 - 25);
+          balloon = new Oval(75, 100);
+          balloon.setPosition(balloonX, balloonY);
+          balloon.setColor(Color.red);
+          add(balloon);
+          string = new Line(balloonX, balloonY + 50, balloonX, balloonY + 50 + 50);
+          add(string);
+        }
+        if (typeof start === 'function') {
+          start();
+        }
+      };
+      </script>
+    </div>
+  </body>
+</html>
