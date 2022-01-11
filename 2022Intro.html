@@ -52,16 +52,80 @@
       <div class="page-header text-center">
         <h1>2022 New Year's Resolutions</h1>
       </div>
-      <p>As we all know, the coming of the new year is a time for us to reflect on
+      <p class="text-center">As we all know, the coming of the new year is a time for us to reflect on
       what we've done in the past year and how we will improve ourselves this year.</p>
-      <p>That is why I am going to share with you my new year's resolutions for 2022!</p>
-      <ul>
-        My resolutions for this year are to:
+      <p class="text-center">That is why I am going to share with you my new year's resolutions for 2022!</p>
+      <br>
+      <canvas class="codehs-editor-canvas" height="400px" width="500px"></canvas>
+      <br><br>
+      <p>My resolutions for this year are to:</p>
+      <ul class="li-effect">
         <li>Continue to exercise and keep physically fit.</li>
         <li>Slow down on the sugars and sweets (in other words, not to have too much of them).</li>
-        <li></li>
+        <li>To continue to do well in my classes and all of the other responsibilities that I have.</li>
       </ul>
-      <canvas class="codehs-editor-canvas" height="400px" width="500px"></canvas>
+      <p>I chose to set these goals for myself because recently I have been slacking off
+      a bit in my exercises and in my dieting. Going into this new year, I want to
+      make sure that I will stay healthy and fit, and setting these goals for myself would
+      be a way for me to do that with a better chance of success.</p>
+      <p>That is the specific reason for the first two goals, but the reason for my last goal
+      speaks for itself. I'm doing well in school right now, and I want to be sure that
+      I can continue to do so going forward. This applies to the rest of this school year
+      and the entirety of next school year as well.</p>
+      <div class="page-header">
+        <h1>Methods of Completion</h1>
+      </div>
+      <p>It would be beneficial for me to outline a general plan for how to complete these goals
+      throughout the year. That is why I will lay out subtasks that I can work towards for each
+      quarter of the year.</p>
+      <p>From January to March I can:</p>
+      <ul class="li-effect">
+        <li>Train to be able to do 35 push-ups in one minute (so that I may be able to do it by the end of March).</li>
+        <li>Set a limit for myself on the number of times that I can eat outside of meals. To start it
+        off for this quarter, I can limit myself to 5 snacks per week.</li>
+        <li>Commit myself to studying for 1-2 hours for each test that I will take in school (in order to maintain my grades).</li>
+      </ul>
+      <br>
+      <p>From April to June I can:</p>
+      <ul class="li-effect">
+        <li>Train to increase the amount of push-ups that I can do from 35 in a minute to 40 in a minute.</li>
+        <li>Decrease the amount of times I can snack to 4 times per week (in an effort to ease myself into snacking less).</li>
+        <li>Continue to study for 1-2 hours of my own time for each test that I have.</li>
+      </ul>
+      <br>
+      <p>From July to September I can:</p>
+      <ul class="li-effect">
+        <li>Train myself to increase my push-ups per minute by another 5 (going from 40 to 45).</li>
+        <li>Reduce the number of times that I can snack per week from 4 times per week to 3 times.</li>
+        <li>Start off the new school year strong in September. It is important to do this after
+        summer because I must account for the "summer slide" that I just went through so that
+        it will not hinder my academic progress in the new school year.</li>
+      </ul>
+      <br>
+      <p>Finally, from October to December I can:</p>
+      <ul class="li-effect">
+        <li>Train to make the final increase in my push-ups per minute, where I will strive
+        to go from doing 45 push-ups in one minute to my final goal of 50 push-ups!</li>
+        <li>Reduce the number of snacks that I can eat outside of meals from 3 snacks per week
+        to 2! This will surely help in keeping healthy!</li>
+        <li>Ramp up my study times from September back up to 2 hours per test. This will ensure
+        that I am well-prepared for just about any test that I may have to take, which will certainly
+        boost my grade and make it good.</li>
+      </ul>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-8">
+          <p>I know it might feel very chummy and cliche to talk about improving ourselves with each
+            coming year, but that is exactly what each of us needs to do every day. Even if we are just incrementally
+            striving to get closer and closer to our yearly goals, like I was just planning to do, that would
+            still help a lot! We could all make small goals for ourselves every so often that, when combined
+            together, could add up to something positive.</p>
+        </div>
+        <div class="col-sm-4">
+          <img src="https://www.centralbank.net/uploadedfiles/images/articles/keeping-your-new-years-resolution.jpg?v=1D67D8009EFBA80" alt="Image of New Year's Resolutions">
+        </div>
+    </div>
+      <br><br><br>
       <script>
       window.onload = function() {
         var newYear = new Text("Happy New Year!", "30pt Blinker");
@@ -91,7 +155,7 @@
           var balloonY = Randomizer.nextInt(50, getHeight()/2- 15 - 50);
           balloon = new Oval(75, 100);
           balloon.setPosition(balloonX, balloonY);
-          balloon.setColor(Color.red);
+          balloon.setColor(Randomizer.nextColor());
           add(balloon);
           string = new Line(balloonX, balloonY + 50, balloonX, balloonY + 50 + 50);
           add(string);
@@ -102,7 +166,7 @@
           var balloonY = Randomizer.nextInt(getHeight()/2 + 30 + 50, getHeight() - 50 - 25);
           balloon = new Oval(75, 100);
           balloon.setPosition(balloonX, balloonY);
-          balloon.setColor(Color.red);
+          balloon.setColor(Randomizer.nextColor());
           add(balloon);
           string = new Line(balloonX, balloonY + 50, balloonX, balloonY + 50 + 50);
           add(string);
