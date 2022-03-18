@@ -1,119 +1,106 @@
-/* CodeHS implementation stuff */
-canvas {
-    border: 1px solid black;
-    display: block;
-    vertical-align: top;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-pre {
-    border: 1px solid black;
-    display: inline-block;
-    width: 400px;
-    height: 500px;
-    background-color: #F5F5F5;
-}
-/*End of CodeHS stuff*/
-nav {
-  background-color: #66ccff !important;
-}
-nav li{
-  transition: background-color 0.4s;
+/* navbar stuff */
+nav, nav li, nav div.navbar-header > a:not(.current) {
+  background-color: #66B032 !important;
 }
 nav a {
-  color: #0066cc !important;
+  color: #1B3409 !important;
   transition: color 0.4s;
-  text-decoration: none;
+  font-family: 'Archivo' !important;
 }
-nav li.current {
-  background-color: #33bbff !important;
+nav li, nav div.navbar-header > a, nav a.current {
+  transition: background-color 0.4s, color 0.4s;
 }
-nav li:hover, nav li.current:hover {
-  background-color: #0088cc !important;
+nav a.current {
+  background-color: #5c9f2d !important;
 }
-nav li:hover a{
-  color: white !important;
+nav li:hover, nav div.navbar-header:hover > a, nav a.current:hover{
+  background-color: #1B3409 !important;
 }
-nav div.navbar-header > a.navbar-brand {
-  font-size: 20px;
-  transition: color 0.4s, background-color 0.4s;
+nav li:hover > a, nav div.navbar-header:hover > a {
+  color: #9BD770 !important;
 }
-nav div.navbar-header > a.navbar-brand:hover {
-  color: white !important;
-  background-color: #0088cc !important;
+nav a:not(.navbar-brand) {
+  font-size: 18px;
 }
-div.container, div.container-fluid {
-  color: #0080ff;
-}
-p {
+nav a.navbar-brand {
   font-size: 22px;
 }
-div.page-header > h1 {
-  font-size: 46px;
-}
-li {
-    font-size: 20px;
-    font-style: normal;
-    transition: font-size 0.2s, font-style 0.2s;
-
-}
-ul.li-effect > li:hover {
-    font-size: 30px;
-    font-style: italic;
-}
-body {
-  font-family: 'Blinker';
-  height: 100%;
-
-}
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-}
-img {
-  width: 100%;
-}
-div.col-sm-5 > img {
-  filter: blur(0px);
-  transition: filter 0.4s;
-}
-div.col-sm-5 > img:active {
-  filter: blur(4px);
-}
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-iframe {
-}
-div.banner-image {
-  background-image: url("https://publicdomainpictures.net/pictures/220000/velka/welcome-sign-1493904620XkE.jpg");
-  background-size: cover;
-  height: 500px;
-  background-position: 0% 20%;
-}
-a {
-  color: #3399ff;
-  text-decoration: underline;
-}
-a.btn {
-  text-decoration: initial;
+/* End navbar stuff*/
+h1, p{
+  font-family: 'Archivo';
 }
 table {
-  color: #0080ff;
+  font-size: 25px;
 }
-table a {
-  color: #3399ff;
-  text-decoration: initial;
+table.no-border {
+  border: none !important;
 }
-th {
-  color: #0073e6;
+table.no-border td {
+  border: none !important;
 }
-#CBunionCap {
-  margin-bottom: 20px;
+div.page-header > h1 {
+  font-size: 57px;
+  color: #375F1B;
 }
-.limited_height {
-  max-width: 300px;
+p {
+  font-size: 28px;
+}
+p, li, table {
+  font-family: 'Archivo';
+  color: #66B032;
+}
+li:not(nav li) {
+  font-size: 23px;
+  transition:
+}
+
+canvas#canvas {
+  margin-left: -15px;
+}
+
+div.main-header {
+  display: block;
+  padding-top: 180px;
+  height: 400px;
+  background-image: url('https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 80%;
+}
+div.main-header > h1 {
+  font-size: 50px;
+  color: #91FF42;
+}
+div.purchase-banner {
+  background-color: #66b032;
+  height: 300px;
+}
+div.purchase-banner h1 {
+  color: #1B3409;
+  font-size: 50px;
+}
+div.purchase-banner p {
+  color: #1B3409;
+}
+div.purchase-banner a.btn {
+  font-size: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+td, th {
+  width: 14.29%;
+}
+table.table-bordered td:hover {
+  background-color: #f2f2f2;
+}
+table.table-bordered td:active {
+  background-color: #d9d9d9;
+}
+.btn-success {
+  background-color: #46a046;
+  border-color: #3e8e3e;
+}
+.btn-success:hover {
+  background-color: #367d36;
+  border-color: #2e6b2e;
 }
